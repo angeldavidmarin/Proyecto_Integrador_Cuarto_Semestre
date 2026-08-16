@@ -1,0 +1,90 @@
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+header{
+    background-color: #e1dfdf;
+}
+header .login-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 100%;
+}
+
+header .logo{
+    margin: 0;
+    padding: 10px 25px;
+    font-weight: bold;
+    color: rgb(65, 169, 169);
+    font-size: 1.8em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+header a{
+    text-decoration: none;
+    color: black;
+    margin: 5px 10px;
+}
+header a:hover{
+    color: rgb(65, 169, 169);
+}
+
+
+#reservations{
+    background-color: rgba(68, 147, 147, 0.244);
+}
+#reservations .container{
+    text-align: center;
+    padding: 200 5px;
+}
+#reservations h2{
+    margin: 10px;
+}
+#reservations p{
+    display: none;
+}
+
+#reservations .service{
+    background-size: cover;
+    padding: 50px 10px;
+    background-position: center center;
+    margin: 20px 0;
+    border-radius: 20px;
+}
+
+.service:first-child{
+    background-image: linear-gradient(0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5))/*poner la imagen un poco oscura*/
+    ,url("../implementos/referencia.png");
+}
+
+.service:nth-child(2){
+    margin-top: 20px;
+    background-image: linear-gradient(0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5))/*poner la imagen un poco oscura*/
+    ,url("../implementos/referencia.png");
+}
+
+.service:nth-child(3){
+    margin-top: 20px;
+    background-image: linear-gradient(0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5))/*poner la imagen un poco oscura*/
+    ,url("../implementos/referencia.png");
+}
