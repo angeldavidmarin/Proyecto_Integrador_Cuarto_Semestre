@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.5em;}
+h3{font-size: 2em;}
+p{font-size: 1.5em}
+ul{list-style: none;}
+li{font-size: 1.8em;}
+
+
+button{
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none; /*solid rgba(0, 0, 0,0.1); me gusta sin borde pero en caso de que no guste cambiarlo*/
+    box-shadow: 0px 2px 5px rgba(0, 0, 0,0.5);
+    /*background-color: #4CAF50; tenemos que hablar el color de la pagina*/
+}
+
+button:hover{
+    background-color: #c0c2c0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+header{
+    background-color: #e1dfdf;
+}
+
+header .logo{
+    margin: 0;
+    padding: 10px 25px;
+    font-weight: bold;
+    color: green;
+    font-size: 1.8em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+header a{
+    text-decoration: none;
+    color: black;
+    margin: 5px 10px;
+}
+header a:hover{
+    color: green;
+}
+
+
+#hero{
+    height: 100vh;
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 0, 0, 0.484);/*en lo que pongo la imagen*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

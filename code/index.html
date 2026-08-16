@@ -14,14 +14,14 @@
         <!--contenedor de parrafo-->
         <div class="container">
             <p class="logo">Nombre</p>
-            <!-- //inicio de seccion o regsitro (enlazarlo  a una bd) -->
-            <a href="login.html">
-            <img src="logo.png" alt="Inicia sesión o regístrate" class="logo">
-            </a>
             <!-- //menu de informacion de la pagina -->
             <nav class ="menu">
 
                 <nav>
+                       <!-- //inicio de seccion o regsitro (enlazarlo  a una bd) -->
+                    <a href="login.html">
+                        <img src="implementos\usuario.png.png" alt="Inicia sesión o regístrate" class="login-icon">
+                    </a>
                     <a href="#">Inicio</a>
                     <a href="#">Acerca de</a>
                     <a href="#">Contacto</a>
@@ -33,7 +33,9 @@
     <section id ="hero">
         
         <h1>Bienvenido a <br>NOMBRE</h1>
-        <button class="btn">Agenda y reserva</button>
+        <form action="reserva.html">
+            <button class="btn">Agenda y reserva</button>
+        </form>
 
     </section>
     <!-- //hablar sobre si quieren que sea otro documento html o que sea un apartado de la pagina principal -->
@@ -76,10 +78,28 @@
             </div>
         </div>
     </section>
+    
+    <section class="characteristics">
+
+        <div class = container>
+
+            <ul>
+                <li>practico y rapido</li>
+                <li>Característica 2</li>
+                <li>Característica 3</li>
+            </ul>
+            <div class="img_character">
+                <img src="characteristic1.png" alt="Características">
+            </div>
+        </div>
+
+    </section>
 
 	<footer>
+        <div>   
     <!--contenedor de anio con el copyrigth de la pagina (detallitos)-->
-		<small>&copy; <span id="year"></span> P.I UCEVA</small>
+            <small>&copy; <span id="year"></span> P.I UCEVA</small>
+        </div>
 	</footer>
 
 	<script>
