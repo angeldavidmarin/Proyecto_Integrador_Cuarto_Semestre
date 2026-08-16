@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv = "X-UA-compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>nombre</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--contenido del encabezado-->
+    <header>
+        <!--contenedor de parrafo-->
+        <div class="container">
+            <p class="logo">Nombre</p>
+            <!-- //inicio de seccion o regsitro (enlazarlo  a una bd) -->
+            <a href="login.html">
+            <img src="logo.png" alt="Inicia sesión o regístrate" class="logo">
+            </a>
+            <!-- //menu de informacion de la pagina -->
+            <nav class ="menu">
+
+                <nav>
+                    <a href="#">Inicio</a>
+                    <a href="#">Acerca de</a>
+                    <a href="#">Contacto</a>
+                </nav>
+            </nav>
+        </div>
+    </header>
+    <!--el juego de la pagina, donde podremos hacer la reserva de los lugares-->
+    <section id ="hero">
+        
+        <h1>Bienvenido a <br>NOMBRE</h1>
+        <button class="btn">Agenda y reserva</button>
+
+    </section>
+    <!-- //hablar sobre si quieren que sea otro documento html o que sea un apartado de la pagina principal -->
+    <section id="about_us">
+
+        <div class = "container">
+
+            <div class="img-container">
+
+            </div>
+
+            <h2>sobre nosotros o algun tipo de informacion</h2>
+
+            <p>hola soy angel los tqm, porfavor si alguien quiere tocar esto ponga informacion o hagamoslo con otro html tqm persona que toque este parrafo y si soy yo  pues pa acordarse soperrita</p>
+        </div>
+    </section>
+
+    <section id="reservations">
+
+        <div class="container">
+
+            <h2>Servicios</h2>
+
+            <div class="service">
+                <img src="service1.png" alt="Servicio 1">
+                <h3>Servicio 1</h3>
+                <p>lorem ipsum dolor sit amet.</p>
+            </div>
+            
+            <div class="service">
+                <img src="service2.png" alt="Servicio 2">
+                <h3>Servicio 2</h3>
+                <p>lorem ipsum dolor sit amet.</p>
+            </div>
+
+            <div class="service">
+                <img src="service3.png" alt="Servicio 3">
+                <h3>Servicio 3</h3>
+                <p>lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </section>
+
+	<footer>
+    <!--contenedor de anio con el copyrigth de la pagina (detallitos)-->
+		<small>&copy; <span id="year"></span> P.I UCEVA</small>
+	</footer>
+
+	<script>
+		// actualiza inámicamente el año actual
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
+</body>
+</html>
