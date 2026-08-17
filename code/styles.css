@@ -12,6 +12,9 @@ body{
 .color_primary{
     color: rgb(65, 169, 169);
 }
+.color_secundary{
+    color: rgb(249, 249, 249);
+}
 h1{font-size: 3.5em;}
 h2{font-size: 2.5em;}
 h3{font-size: 2em;}
@@ -41,7 +44,7 @@ button:hover{
 }
 
 header{
-    background-color: #e1dfdf;
+    background-color: #8f8e8ebe;
 }
 header .login-icon{
     width: 20px;
@@ -54,8 +57,10 @@ header .logo{
     margin: 0;
     padding: 10px 25px;
     font-weight: bold;
-    color: rgb(65, 169, 169);
     font-size: 1.8em;
+    color:rgb(250, 250, 250);
+    /* box-shadow: 0px 10px 100px rgba(233, 233, 233, 0.5); */
+    
 }
 
 header .container{
@@ -73,7 +78,7 @@ header nav{
 }
 header a{
     text-decoration: none;
-    color: black;
+    color: white;
     margin: 5px 10px;
 }
 header a:hover{
