@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
     <meta http-equiv = "X-UA-compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>nombre</title>
+	<title>SpotVia</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,9 +13,9 @@
     <header>
         <!--contenedor de parrafo-->
         <div class="container">
-            <p class="logo">Spot<span class="color_primary">Via</span></p>
+            <h1 class="logo">Spot<span class="color_primary">Via</span></h1>
             <!-- //menu de informacion de la pagina -->
-            <nav class ="menu">
+            <div class ="menu">
 
                 <nav>
                        <!-- //inicio de seccion o regsitro (enlazarlo  a una bd) -->
@@ -26,51 +26,54 @@
                     <a href="#about_us">Acerca de</a>
                     <a href="#">Contacto</a>
                 </nav>
-            </nav>
+            </div>
         </div>
     </header>
+    <aside>
+        <!-- posible agregado de informacion secundaria, tipo redes, programadores etc etc -->
+    </aside>
     <!--el juego de la pagina, donde podremos hacer la reserva de los lugares-->
     <section id ="hero">
         
-        <h1>Bienvenido a <br><span class ="color_secundary">Spot</span><span class="color_primary">Via</span></h1>
-        <form action="reserva.html">
-            <button class="btn">Agenda y reserva</button>
-        </form>
-
+        <h2>Bienvenido a <br>Spot<span class="color_primary">Via</span></h2>
+        <a href="reserva.html">
+            <button>Agenda y reserva</button>
+        </a>
+        
     </section>
     <!-- //hablar sobre si quieren que sea otro documento html o que sea un apartado de la pagina principal -->
     <section id="about_us">
 
         <div class = "container">
 
-            <div class="img-container">
-
-            </div>
-
+            <div class="img_container"></div>
+            
+            <div class="text_about_us">
             <h2>sobre nosotros o algun tipo de informacion</h2>
 
             <p>hola soy <span class = "color_primary">Angel</span> , porfavor si alguien quiere tocar esto ponga informacion o hagamoslo con otro html tqm persona que toque este parrafo y si soy yo  pues pa acordarse soperrita</p>
+            </div>
         </div>
     </section>
 
-    <section class="characteristics">
-
+    <section id="characteristics">
         <div class = container>
-
             <ul>
-                <li>practico y rapido</li>
-                <li>Característica 2</li>
-                <li>Característica 3</li>
+                <li><span class="color_primary">✔</span> practico y rapido</li>
+                <li><span class="color_primary">✔</span> Característica 2</li>
+                <li><span class="color_primary">✔</span> Característica 3</li>
             </ul>
-            <div class="img_character">
-                <img src="characteristic1.png" alt="Características">
-            </div>
+            <div class = img_characteristic></div>
+
         </div>
+        
 
     </section>
 
 	<footer>
-        <div>   
+        <div class ="container">
+            <!--contenedor de parrafo con el copyrigth de la pagina (detallitos)-->
+            <p>Spot<span class="color_primary">Via</span></p>
     <!--contenedor de anio con el copyrigth de la pagina (detallitos)-->
             <small>&copy; <span id="year"></span> P.I UCEVA</small>
         </div>

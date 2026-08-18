@@ -8,13 +8,12 @@ html{
 body{
     margin: 0;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    background-color:  rgba(0, 0, 0, 0.871);
 }
 .color_primary{
     color: rgb(65, 169, 169);
 }
-.color_secundary{
-    color: rgb(249, 249, 249);
-}
+
 h1{font-size: 3.5em;}
 h2{font-size: 2.5em;}
 h3{font-size: 2em;}
@@ -31,7 +30,7 @@ button{
     border: none; /*solid rgba(0, 0, 0,0.1); me gusta sin borde pero en caso de que no guste cambiarlo*/
     box-shadow: 0px 2px 5px rgba(0, 0, 0,0.5);
     background-color:rgb(65, 169, 169);
-    font-size: 1.2em;
+    font-size: 2em;
 }
 
 button:hover{
@@ -44,7 +43,7 @@ button:hover{
 }
 
 header{
-    background-color: #8f8e8ebe;
+    background-color: rgba(65, 163, 163, 0.491);
 }
 header .login-icon{
     width: 20px;
@@ -80,6 +79,7 @@ header a{
     text-decoration: none;
     color: white;
     margin: 5px 10px;
+    font-size: 1.5em;
 }
 header a:hover{
     color: rgb(65, 169, 169);
@@ -100,10 +100,117 @@ header a:hover{
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: white;
 }
-
 
 #about_us .container{
     text-align: center;
-    padding: 200 12px;
+    padding: 200px 12px;
+    color: rgb(251, 250, 250);
+}
+#about_us h2{
+    margin: 0px 0px 90px 0px;
+    padding: 0px;
+}
+
+#characteristics{
+    background-color: rgba(0, 0, 0);
+}
+#characteristics .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 200px 10px;
+}
+#characteristics ul{
+    padding: 0px;
+    margin: auto;
+}
+
+#characteristics li{
+    padding: 20px;
+    margin: 20px;
+    font-weight: 900;
+    color: white;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+}
+footer small{
+    color: rgb(65, 169, 169);
+}
+
+footer .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    color:white;
+}
+
+@media (min-width: 750px){
+    header{
+        position: fixed;
+        width: 100%;
+        background-color: rgba(53, 105, 105, 0.391);
+    }
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px 10px;
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 10px;
+    }
+    /* #hero{
+        depende de la imagen cuadrar o no
+    } */
+    #about_us .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #about_us .text_about_us{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 20px;
+        margin: 10px;
+    }
+    #about_us .img_container{
+    background-image:url("../implementos/referencia.png");/*rn lo que buscamos foto*/
+    background-size: cover;
+    background-position: center center;
+    width: 40%;
+    height: 500px;
+    }
+
+    #characteristics .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    #characteristics .img_characteristic{
+        background-image:url("../implementos/referencia.png");
+        background-size: cover;
+        background-position: center center;
+        width: 30%;
+        height: 300px;
+        margin: 70px;
+    }
+    footer .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
