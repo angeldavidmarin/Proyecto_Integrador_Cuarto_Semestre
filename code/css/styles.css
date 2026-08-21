@@ -5,11 +5,13 @@
 html{
     scroll-behavior: smooth;
 }
+
 body{
     margin: 0;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    background-color:  rgba(0, 0, 0, 0.871);
+    background-color: rgba(0, 0, 0, 0.871);
 }
+
 .color_primary{
     color: rgb(65, 169, 169);
 }
@@ -21,22 +23,6 @@ p{font-size: 1.5em}
 ul{list-style: none;}
 li{font-size: 1.8em;}
 
-
-button{
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px 30px;
-    border-radius: 5px;
-    border: none; /*solid rgba(0, 0, 0,0.1); me gusta sin borde pero en caso de que no guste cambiarlo*/
-    box-shadow: 0px 2px 5px rgba(0, 0, 0,0.5);
-    background-color:rgb(65, 169, 169);
-    font-size: 2em;
-}
-
-button:hover{
-    background-color: rgb(50, 112, 112);
-}
-
 .container{
     max-width: 1200px;
     margin: auto;
@@ -44,12 +30,14 @@ button:hover{
 
 header{
     background-color: rgba(65, 163, 163, 0.491);
+    padding: 10px;
 }
-header .login-icon{
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-    border-radius: 100%;
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header .logo{
@@ -57,50 +45,135 @@ header .logo{
     padding: 10px 25px;
     font-weight: bold;
     font-size: 1.8em;
-    color:rgb(250, 250, 250);
-    /* box-shadow: 0px 10px 100px rgba(233, 233, 233, 0.5); */
-    
+    color: rgb(250, 250, 250);
 }
 
-header .container{
+.header-actions {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 15px; 
+    margin-left: auto; 
+}
+.login-text{
+    display: none;
 }
 
-header nav{
+/* Enlace del usuario/registro */
+header .login-link {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding-bottom: 10px;
-}
-header a{
+    gap: 6px;
     text-decoration: none;
     color: white;
-    margin: 5px 10px;
-    font-size: 1.5em;
+    font-size: 1.1em;
 }
-header a:hover{
+
+/* Imagen del icono renderizada mediante CSS */
+header .login-icon {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-image: url("../../implementos/usuario.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100%;
+}
+
+.open_menu {
+    text-align: end;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.close_menu {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2.5em;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+/* Menú flotante lateral */
+.nav {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    background-color: rgba(37, 100, 100, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    gap: 1rem;
+    padding: 20px;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Clase activa activada por JS */
+.nav.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav ul {
+    align-items: flex-start;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+header a:hover {
     color: rgb(65, 169, 169);
 }
 
+/* --- SECCIONES PRINCIPALES --- */
 
 #hero{
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: linear-gradient(0deg,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5))/*poner la imagen un poco oscura*/
-    ,url("../implementos/referencia.png");/*rn lo que buscamos foto*/
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../implementos/referencia.png");
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
+}
+
+#hero button{
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgb(65, 169, 169);
+    font-size: 2em;
+}
+
+#hero button:hover{
+    background-color: rgb(50, 112, 112);
 }
 
 #about_us .container{
@@ -108,6 +181,7 @@ header a:hover{
     padding: 200px 12px;
     color: rgb(251, 250, 250);
 }
+
 #about_us h2{
     margin: 0px 0px 90px 0px;
     padding: 0px;
@@ -116,6 +190,7 @@ header a:hover{
 #characteristics{
     background-color: rgba(0, 0, 0);
 }
+
 #characteristics .container{
     display: flex;
     justify-content: space-around;
@@ -124,6 +199,7 @@ header a:hover{
     flex-wrap: wrap;
     padding: 200px 10px;
 }
+
 #characteristics ul{
     padding: 0px;
     margin: auto;
@@ -140,6 +216,7 @@ footer{
     padding: 20px;
     text-align: center;
 }
+
 footer small{
     color: rgb(65, 169, 169);
 }
@@ -149,29 +226,36 @@ footer .container{
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    color:white;
+    color: white;
 }
 
-@media (min-width: 750px){
+/* --- ADAPTACIÓN RESPONSIVA (PANTALLAS GRANDES) --- */
 
+@media (min-width: 750px){
     header{
         position: fixed;
-        width: 100%;
         top: 0;
         left: 0;
         width: 100%;
         z-index: 1000;
         background-color: rgba(53, 105, 105, 0.85);
     }
+
     header .container{
         flex-direction: row;
         justify-content: space-between;
         padding: 15px 20px;
     }
-    header nav{
-        flex-direction: row;
-        padding-bottom: 0;
-        padding-right: 10px;
+
+ 
+    .nav ul {
+        flex-direction: column;
+        font-size: 0.5em;
+        gap: 1rem;
+    }
+
+    .login-text{
+        display: block;
     }
     #hero {
         height: calc(100vh - 80px);
@@ -183,6 +267,7 @@ footer .container{
         flex-direction: row;
         justify-content: space-evenly;
     }
+
     #about_us .text_about_us{
         width: 50%;
         max-width: 600px;
@@ -193,12 +278,13 @@ footer .container{
         padding: 20px 20px;
         margin: 10px;
     }
+
     #about_us .img_container{
-    background-image:url("../implementos/referencia.png");/*rn lo que buscamos foto*/
-    background-size: cover;
-    background-position: center center;
-    width: 40%;
-    height: 500px;
+        background-image: url("../../implementos/referencia.png");
+        background-size: cover;
+        background-position: center center;
+        width: 40%;
+        height: 500px;
     }
 
     #characteristics .container{
@@ -208,13 +294,14 @@ footer .container{
     }
     
     #characteristics .img_characteristic{
-        background-image:url("../implementos/referencia.png");
+        background-image: url("../../implementos/referencia.png");
         background-size: cover;
         background-position: center center;
         width: 30%;
         height: 300px;
         margin: 70px;
     }
+
     footer .container{
         display: flex;
         flex-direction: row;

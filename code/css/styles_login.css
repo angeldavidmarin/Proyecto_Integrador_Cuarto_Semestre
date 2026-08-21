@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth ;
+}
+
+body{
+    margin: 0;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    background-color:  rgba(0, 0, 0, 0.871);
+}
+
+h2{font-size: 3em;}
+p{font-size: 1.2em;}
+
+.color_primary{
+    color: rgb(65, 169, 169);
+}
+.color_secundary{
+    color: rgb(249, 249, 249);
+}
+
+label{
+    color: white;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+#login .container{
+    text-align: center;
+    color:white;
+}
+#login .form-group{
+    display: flex;
+    justify-content: column;
+    
+    margin:20px;
+    padding:10px;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SpotVia</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!--contenido del encabezado-->
+    <header>
+        <div class="container">
+            <h1 class="logo">Spot<span class="color_primary">Via</span></h1>
+
+            <!-- Contenedor de la derecha (Icono Login + Botón Hamburguesa) -->
+            <div class="header-actions">
+                <a href="./login.html" class="login-link">
+                    <span class="login-icon"></span>
+                    <span class="login-text">Registro</span>
+                </a>
+
+                <button id="open_menu" class="open_menu"><i class="bi bi-list"></i></button>
+            </div>
+
+            <!-- Menú desplegable lateral -->
+            <div class="menu">
+                <nav class="nav" id="nav">
+                    <button id="close_menu" class="close_menu"><i class="bi bi-x"></i></button>
+                    <ul>
+                        <li><a href="#">Información</a></li>
+                        <li><a href="#">Acerca de </a></li>
+                        <li><a href="#">Contacto </a></li>
+                        <li><a href="reserva.html"> Nuestros Programas </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <aside>
+        <!-- posible agregado de informacion secundaria, tipo redes, programadores etc etc -->
+    </aside>
+
+    <!--el juego de la pagina, donde podremos hacer la reserva de los lugares-->
+    <section id="hero">
+        <h2>Bienvenido a <br>Spot<span class="color_primary">Via</span></h2>
+        <a href="reserva.html">
+            <button>Agenda y reserva</button>
+        </a>
+    </section>
+
+    <!-- //hablar sobre si quieren que sea otro documento html o que sea un apartado de la pagina principal -->
+    <section id="about_us">
+        <div class="container">
+            <div class="img_container"></div>
+            <div class="text_about_us">
+                <h2>sobre nosotros o algun tipo de informacion</h2>
+                <p>hola soy <span class="color_primary">Angel</span> , porfavor si alguien quiere tocar esto ponga informacion o hagamoslo con otro html tqm persona que toque este parrafo y si soy yo  pues pa acordarse soperrita</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="characteristics">
+        <div class="container">
+            <ul>
+                <li><span class="color_primary">✔</span> practico y rapido</li>
+                <li><span class="color_primary">✔</span> Característica 2</li>
+                <li><span class="color_primary">✔</span> Característica 3</li>
+            </ul>
+            <div class="img_characteristic"></div>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <div class="container">
+            <!--contenedor de parrafo con el copyrigth de la pagina (detallitos)-->
+            <p>Spot<span class="color_primary">Via</span></p>
+            <!--contenedor de anio con el copyrigth de la pagina (detallitos)-->
+            <small>&copy; <span id="year"></span> P.I UCEVA</small>
+        </div>
+    </footer>
+
+    <!-- Enlace al archivo JS externo -->
+    <script src="../js/main.js"></script>
+
+    <script>
+        // actualiza dinámicamente el año actual
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
