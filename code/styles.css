@@ -153,24 +153,31 @@ footer .container{
 }
 
 @media (min-width: 750px){
+
     header{
         position: fixed;
         width: 100%;
-        background-color: rgba(53, 105, 105, 0.391);
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: rgba(53, 105, 105, 0.85);
     }
     header .container{
         flex-direction: row;
         justify-content: space-between;
-        padding: 30px 10px;
+        padding: 15px 20px;
     }
     header nav{
         flex-direction: row;
         padding-bottom: 0;
         padding-right: 10px;
     }
-    /* #hero{
-        depende de la imagen cuadrar o no
-    } */
+    #hero {
+        height: calc(100vh - 80px);
+        margin-top: 80px; 
+    }
+
     #about_us .container{
         display: flex;
         flex-direction: row;
