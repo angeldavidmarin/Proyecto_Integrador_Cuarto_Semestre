@@ -29,7 +29,7 @@ li{font-size: 1.8em;}
 }
 
 header{
-    background-color: rgba(65, 163, 163, 0.491);
+    background-color: rgba(54, 138, 138, 0.74);
     padding: 10px;
 }
 
@@ -159,6 +159,8 @@ header a:hover {
     align-items: center;
     text-align: center;
     color: white;
+    clip-path: polygon( 0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+
 }
 
 #hero button{
@@ -259,7 +261,7 @@ footer .container{
     }
     #hero {
         height: calc(100vh - 80px);
-        margin-top: 80px; 
+        margin-top: 103px; 
     }
 
     #about_us .container{
