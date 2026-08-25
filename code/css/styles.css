@@ -183,6 +183,12 @@ header a:hover {
     padding: 200px 12px;
     color: rgb(251, 250, 250);
 }
+#about_us a{
+    color: rgb(71, 149, 143);
+}
+#about_us a:hover{
+     color: rgb(131, 212, 205);
+}
 
 #about_us h2{
     margin: 0px 0px 90px 0px;
