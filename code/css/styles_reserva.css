@@ -27,6 +27,7 @@ li{font-size: 1.8em;}
 .container{
     max-width: 1200px;
     margin: auto;
+    color: rgb(251, 250, 250);
 }
 header{
     background-color: rgba(65, 163, 163, 0.491);
@@ -145,10 +146,21 @@ header a:hover {
     color: rgb(65, 169, 169);
 }
 
+#def_reservations .container{
+    padding: 10px 20px;
+    text-align: justify;
+
+}
+#def_reservations h2{
+    text-align: center;
+}
+#def_reservations p{
+    font-size: 1.8em;
+}
+
 #reservations .container{
     text-align: center;
-    padding: 100px 5px;
-    color: rgb(251, 250, 250);
+    padding: 20px 5px;
 }
 
 #reservations h2{
@@ -243,10 +255,13 @@ footer .container{
     .login-text{
         display: block;
     }
-
+    #def_reservations .container{
+        padding-top: 200px;
+    }
+    
     #reservations {
         height: calc(100vh - 80px);
-        margin-top: 80px; 
+        margin-top: 100px; 
 
     }
     #reservations .service{
