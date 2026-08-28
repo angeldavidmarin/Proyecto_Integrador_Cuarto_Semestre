@@ -7,30 +7,64 @@
 	<link rel="stylesheet" href="../css/styles_login.css">
 </head>
 <body>
-	<div class="container">
-		<div class="container-form">
-			<form class="sign-in"></form>
-				<h2> Iniciar Seccion</h2>
-				<div class = "social-networks"></div>
-				<span> Use su correo y contraseña</span>
-			<div class = "container-input">
-				<ion-icon name="mail-outline"></ion-icon>
-				<input type="email" placeholder="Ingrese su correo">
+	<main>
+		<div id="form" class="container">
+			<div class="container-form">
+				<form class="sign-in">
+					<h2> Iniciar Seccion</h2>
+					<div class = "social-networks"> <!--de momento no se usa--> </div> 
+					<span> Use su correo y contraseña</span>
+					<div class = "container-input">
+						<ion-icon name="mail-outline"></ion-icon>
+						<input type="email" placeholder="Ingrese su correo">
+					</div>
+					<div class="container-input">
+						<ion-icon name="lock-closed-outline"></ion-icon>
+						<input type="password" placeholder="Ingrese su contraseña">
+					</div>
+					<a href="#">¿olvidaste tu contraseña?</a>
+					<button class="button">INICIAR SESIÓN</button>
+				</form>
 			</div>
-			<div>
-				<ion-icon name="lock-closed-outline"></ion-icon>
-				<input type="password" placeholder="Ingrese su contraseña">
+			<div class="container-form">
+				<form class="sign-up">
+					<h2>Registrarse</h2>
+					<div class = "social-networks"> <!--de momento no se usa--> </div> 
+					<span> Use su correo electronico para registrarse</span>
+					<div class = "container-input">
+						<ion-icon name="person-outline"></ion-icon>
+						<input type="text" placeholder="nombre">
+					</div>
+					<div class = "container-input">
+						<ion-icon name="mail-outline"></ion-icon>
+						<input type="email" placeholder="Ingrese su correo">
+					</div>
+					<div class = "container-input">
+						<ion-icon name="lock-closed-outline"></ion-icon>
+						<input type="password" placeholder="Ingrese su contraseña">
+					</div>
+					<button class="button">REGISTRARSE</button>
+				</form>
+			</div>
+			<div class="container-welcome">
+				<div class="welcome-sign-up welcome">
+					<h3>Bienvenido!</h3>
+					<p>ingrese sus datos personales para usar las funciones del sitio </p>
+					<button class="button" id="btn-sing-up">registrarse</button>
+				</div>
+				<div class="welcome-sign-in welcome">
+					<h3>Hola!</h3>
+					<p>ingrese sus datos personales para usar las funciones de nuestro sitio</p>
+					<button class="button" id="btn-sing-in">iniciar sesión</button>
+				</div>
 			</div>
 		</div>
-		<div class="container-form">
-			<form class="sign-up"></form>
-				<h2>Registrarse</h2>
+	</main>
 
-		</div>
-	</div>
+
 	<script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 	<!-- se uso ionicons, para los logos -->
-	<script src="../js/main.js"></script>
+	<script src="../js/form.js"></script>
 </body>
 </html>
