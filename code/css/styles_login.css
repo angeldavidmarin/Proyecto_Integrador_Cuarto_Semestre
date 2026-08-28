@@ -1,3 +1,9 @@
+:root {
+    --color-primario: rgb(65, 169, 169);
+    --color-hover: rgb(50, 112, 112);
+    --fondo-oscuro: rgba(0, 0, 0, 0.871);
+}
+
 *{
     box-sizing: border-box;
 }
@@ -19,6 +25,9 @@ body{
     align-items: center;
 }
 main .container{
+    width: 100%;
+    max-width: 700px;
+    min-height: 500px;
     color:white;
     margin: 10px;
     height: 500px;
@@ -96,7 +105,7 @@ ion-icon{
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    background-color: rgb(65, 169, 169);
+    background-color: var(--color-primario);
     color:white;
 }
 /* animacion de formulario */
@@ -167,6 +176,9 @@ ion-icon{
 .container-welcome .button{
     border: 2px solid rgb(255, 255, 255);
     
+}
+.container-welcome .button:hover{
+background-color: var(--color-hover);
 }
 
 .container.toggle .welcome-sign-in{

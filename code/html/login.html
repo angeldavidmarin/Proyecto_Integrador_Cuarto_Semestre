@@ -11,16 +11,16 @@
 		<div id="form" class="container">
 			<div class="container-form">
 				<form class="sign-in">
-					<h2> Iniciar Seccion</h2>
+					<h2> Iniciar Sesión</h2>
 					<div class = "social-networks"> <!--de momento no se usa--> </div> 
 					<span> Use su correo y contraseña</span>
 					<div class = "container-input">
 						<ion-icon name="mail-outline"></ion-icon>
-						<input type="email" placeholder="Ingrese su correo">
+						<input type="email" placeholder="Ingrese su correo" required>
 					</div>
 					<div class="container-input">
 						<ion-icon name="lock-closed-outline"></ion-icon>
-						<input type="password" placeholder="Ingrese su contraseña">
+						<input type="password" placeholder="Ingrese su contraseña" required>
 					</div>
 					<a href="#">¿olvidaste tu contraseña?</a>
 					<button class="button">INICIAR SESIÓN</button>
@@ -33,15 +33,15 @@
 					<span> Use su correo electronico para registrarse</span>
 					<div class = "container-input">
 						<ion-icon name="person-outline"></ion-icon>
-						<input type="text" placeholder="nombre">
+						<input type="text" placeholder="nombre" required>
 					</div>
 					<div class = "container-input">
 						<ion-icon name="mail-outline"></ion-icon>
-						<input type="email" placeholder="Ingrese su correo">
+						<input type="email" placeholder="Ingrese su correo" required>
 					</div>
 					<div class = "container-input">
 						<ion-icon name="lock-closed-outline"></ion-icon>
-						<input type="password" placeholder="Ingrese su contraseña">
+						<input type="password" placeholder="Ingrese su contraseña" required>
 					</div>
 					<button class="button">REGISTRARSE</button>
 				</form>
@@ -50,12 +50,12 @@
 				<div class="welcome-sign-up welcome">
 					<h3>Bienvenido!</h3>
 					<p>ingrese sus datos personales para usar las funciones del sitio </p>
-					<button class="button" id="btn-sing-up">registrarse</button>
+					<button type="button" class="button" id="btn-sign-up">registrarse</button>
 				</div>
 				<div class="welcome-sign-in welcome">
 					<h3>Hola!</h3>
 					<p>ingrese sus datos personales para usar las funciones de nuestro sitio</p>
-					<button class="button" id="btn-sing-in">iniciar sesión</button>
+					<button type="button" class="button" id="btn-sign-in">iniciar sesión</button>
 				</div>
 			</div>
 		</div>

@@ -1,3 +1,9 @@
+:root {
+    --color-primario: rgb(65, 169, 169);
+    --color-hover: rgb(50, 112, 112);
+    --fondo-oscuro: rgba(0, 0, 0, 0.871);
+}
+
 *{
     box-sizing: border-box;
 }
@@ -12,8 +18,10 @@ body{
     background-color: rgba(0, 0, 0, 0.871);
 }
 
+
+
 .color_primary{
-    color: rgb(65, 169, 169);
+    color: var(--color-primario);
 }
 
 h1{font-size: 3.5em;}
@@ -142,7 +150,7 @@ header a {
 }
 
 header a:hover {
-    color: rgb(65, 169, 169);
+    color: var(--color-hover);
 }
 
 /* --- SECCIONES PRINCIPALES --- */
@@ -163,7 +171,13 @@ header a:hover {
 
 }
 
-#hero button{
+#hero .btn-hero {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--color-primario);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     padding: 10px 30px;
@@ -174,7 +188,7 @@ header a:hover {
     font-size: 2em;
 }
 
-#hero button:hover{
+#hero .btn-hero:hover{
     background-color: rgb(50, 112, 112);
 }
 
