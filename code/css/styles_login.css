@@ -4,8 +4,10 @@
     --fondo-oscuro: rgba(0, 0, 0, 0.871);
 }
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
 }
 
 html{
@@ -26,21 +28,20 @@ body{
 }
 main .container{
     width: 100%;
-    max-width: 700px;
-    min-height: 500px;
     color:white;
-    margin: 10px;
+    /* margin: 10px; */
     height: 500px;
     width: 700px;
     display: flex;
     flex-direction: row;
     /* border: 1px solid; */
     position: relative;
+    overflow: hidden;
 }
 
 .container-form{
     width: 100%;
-    /* border: 2px solid blue; */
+    border: 2px solid blue;
     overflow: hidden;
     
 }
@@ -50,7 +51,7 @@ main .container{
     padding-top: 10px;
 }
 .container-form form{
-    /* border: 2px solid white; */
+    /* border: 2px solid blue; */
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -133,6 +134,7 @@ ion-icon{
 
 /* welcome */
 .container-welcome{
+    border: 2px;
     position: absolute;
     width: 50%;
     height: 100%;
@@ -159,8 +161,8 @@ ion-icon{
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    color: rgb(255, 255, 255);;
-    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out; ;
+    color: rgb(255, 255, 255);
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 .welcome-sign-in{
@@ -175,6 +177,7 @@ ion-icon{
 }
 .container-welcome .button{
     border: 2px solid rgb(255, 255, 255);
+    background-color: transparent;
     
 }
 .container-welcome .button:hover{
@@ -187,4 +190,92 @@ background-color: var(--color-hover);
 
 .container.toggle .welcome-sign-up{
     transform: translateX(-100%);
+}
+/* mobile  */
+@media (max-width:750px){
+
+
+    html, body {
+        width: 100%;
+        height: 100dvh; 
+        background-color: rgba(0, 0, 0, 0.871);
+        overflow: hidden; 
+    }
+
+    main {
+        width: 100%;
+        height: 100%; 
+        display: flex; 
+    }
+
+    main .container {
+        width: 100%;
+        height: 100%; 
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .container-form form{
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        top: 0;
+        left: 0%;
+        display: flex;
+    }
+
+
+    main .container-welcome {
+        width: 100%;
+        height: 50%;
+        top: auto;
+        bottom: 0; 
+        transform: translateY(0); 
+        border-radius: 0; 
+        z-index: 10;
+        transition: transform 0.7s ease-in-out;
+    }
+
+    .welcome-sign-up{
+        padding-bottom: 100px;
+        padding-top:140px;
+    }
+    .welcome-sign-in {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        transform: translateY(100%); 
+        
+    }
+    /* animacion de welcome y form */
+    /* welcome */
+    .container.toggle .container-welcome {
+        transition: transform 0.7s ease-in-out;
+        transform: translateY(-100%);
+        border-radius: 0;
+    }
+    .container.toggle .welcome-sign-in { 
+        transition: transform 0.7s ease-in-out;
+        transform: translateY(0); 
+    }
+    .container.toggle .welcome-sign-up { 
+        transition: transform 0.7s ease-in-out;
+        transform: translateY(-100%); 
+    }  
+    /* form */
+   .container-form form.sign-in{
+        transition: transform 0.7s ease-in-out;
+        z-index: 1;
+    }
+    .container-form form.sign-up{
+        transition: transform 0.7s ease-in-out;
+        transform: translateY(0%);
+    }
+    .container.toggle .container-form form.sign-up{
+        transition: transform 0.7s ease-in-out;
+        transform: translateY(100%);
+    }
+    .container.toggle .container-form form.sign-in{
+        transition: transform 0.7s ease-in-out;
+        transform: translateY(-100%);
+    }
 }
