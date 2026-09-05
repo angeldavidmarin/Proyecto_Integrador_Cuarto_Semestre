@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reser_form.css">
+    <title>Formulario de Reservas</title> 
+</head>
+<body>
+    <header>
+        <a href="index.html"><h1>Spot<span class="color_primary">Via</span></h1></a>
+    </header>
+    <main class="main">
+        <h2>Haz tu reserva</h2> 
+        <div class="container-form">
+
+            <form action="#" method="post">
+                <div class="container-inputs">
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo de la persona a cargo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Dayana Serna Lopez" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="evento">Nombre del evento</label>
+                        <input type="text" id="evento" name="evento" placeholder="Tu Evento" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="place">Selecciona un lugar</label>
+                        <select id="place" name="place" required>
+                            <option value="" disabled selected>-- Elige un lugar --</option>
+                            <option value="place1">Lugar 1</option>
+                            <option value="place2">Lugar 2</option>
+                            <option value="place3">Lugar 3</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="identificacion">Identificación</label>
+                        <input type="text" id="identificacion" name="id" inputmode="numeric" pattern="[0-9]*" placeholder="Número de documento" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Fecha y hora de la reserva</label>
+                        <input type="datetime-local" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date-fin">Fecha y hora de finalizacion de la reserva</label>
+                        <input type="datetime-local" id="date-fin" name="date-fin" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pais">País</label>
+                        <input type="text" id="pais" name="pais" placeholder="País" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="municipio">Municipio</label>
+                        <input type="text" id="municipio" name="municipio" placeholder="Municipio" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ciudad">Ciudad</label>
+                        <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
+                    </div>  
+
+                    <div class="form-group grupo-descripcion">
+                        <label for="describe-event">Describe tu evento</label>
+                        <textarea id="describe-event" name="describe-event" rows="5" placeholder="Describe los detalles de tu evento..." required></textarea>
+                    </div>
+
+                </div>
+                
+                <button type="submit" class="button">Reservar</button>
+            </form>
+            
+        </div>
+    </main>
+       <footer>
+        <hr>
+        <div class ="container">
+            
+            <!--contenedor de parrafo con el copyrigth de la pagina (detallitos)-->
+            <p>Spot<span class="color_primary">Via</span></p>
+    <!--contenedor de anio con el copyrigth de la pagina (detallitos)-->
+            <small>&copy; <span id="year"></span> P.I UCEVA</small>
+        </div>
+	</footer>
+    <script>
+		
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
+</body>
+</html>
