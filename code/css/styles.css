@@ -25,7 +25,10 @@ body{
 }
 
 h1{font-size: 3.5em;}
-h2{font-size: 2.5em;}
+h2{
+    color: white;
+    font-size: 2.5em;
+}
 h3{font-size: 2em;}
 p{font-size: 1.5em}
 ul{list-style: none;}
@@ -190,6 +193,100 @@ header a:hover {
 
 #hero .btn-hero:hover{
     background-color: rgb(50, 112, 112);
+}
+
+.featured-events-section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.featured-events-section h2 {
+    text-align: center;
+    color: #fbfbfb;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.event-card {
+    background-color: #184a50;
+    border-radius: 12px;
+    overflow: hidden; /* Evita que la imagen se salga de los bordes curvos */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 79, 153, 0.5);
+}
+.event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Asegura que la imagen no se deforme */
+    background-color: #363d44; /* Color de fondo mientras carga */
+}
+.event-details {
+    padding: 1.5rem;
+    flex-grow: 1; /* Empuja el botón hacia abajo si el texto es corto */
+    display: flex;
+    flex-direction: column;
+}
+.event-title {
+    font-size: 1.25rem;
+    color: #e6dddd;
+    margin-bottom: 0.5rem;
+}
+.event-info-text {
+    font-size: 0.9rem;
+    color: #c0b1b1;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.event-btn {
+    margin-top: auto; /* Mantiene el botón siempre en la parte inferior de la tarjeta */
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745; /* Un color verde para diferenciarlo del formulario */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.event-btn:hover {
+    background-color: #218838;
+}
+
+.container-button-reser{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.go-reserva{
+    border: 2px solid var(--color-primario);
+    width: 50vh;
+    height: 7vh;
+    border-radius: 15px;
+    background-color: transparent;
+    color: var(--color-primario);
+    font-size: 1em;
+}
+.go-reserva:hover{
+    background-color: #11566635 ;
+    box-shadow: 0 0px 50px rgba(0, 79, 153, 0.5);
 }
 
 #about_us .container{
