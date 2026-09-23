@@ -1,0 +1,150 @@
+header{
+    /* background-color: rgba(65, 163, 163, 0.491); */
+    background-color: #08101C;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    margin: 0;
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 1.8em;
+    color: rgb(250, 250, 250);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    margin-left: auto; 
+}
+.login-text{
+    display: none;
+}
+
+/* Enlace del usuario/registro */
+header .login-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+
+
+header .login-icon {
+    display: flex;
+    width: 28px;
+    height: 28px;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-icon{
+    color: white;
+}
+
+.open_menu {
+    text-align: end;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.close_menu {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2.5em;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+/* Menú flotante lateral */
+.nav {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    /* background-color: rgba(37, 100, 100, 0.95); */
+    background-color: #08101C;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    gap: 1rem;
+    padding: 20px;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Clase activa activada por JS */
+.nav.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav ul {
+    align-items: flex-end;
+    font-size: 0.5em;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+.login-link:hover ion-icon,
+.login-link:hover strong {
+    color: rgb(50, 112, 112);
+    transition: color 0.3s ease; 
+}
+
+
+@media (min-width: 750px) {
+    
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #08101cc2;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        font-size: 0.4em;
+        gap: 1rem;
+    }
+
+    .login-text{
+        display: block;
+    }
+}

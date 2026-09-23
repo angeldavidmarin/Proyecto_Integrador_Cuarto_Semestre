@@ -5,20 +5,29 @@
     <meta http-equiv = "X-UA-compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>SpotVia</title>
+        <!-- tipo de letra poppin -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../css/card.css">
 	<link rel="stylesheet" href="../css/styles_reserva.css">
+    <link rel="stylesheet" href="../css/header.css">
 </head>
 <body>
-     <header>
+    <header>
         <div class="container">
             <a href="index.html"><h1 class="logo">Spot<span class="color_primary">Via</span></h1></a>
 
             <!-- Contenedor de la derecha (Icono Login + Botón Hamburguesa) -->
             <div class="header-actions">
                 <a href="./login.html" class="login-link">
-                    <span class="login-icon"></span>
-                    <span class="login-text">Registro</span>
-                </a>
+                    <span class="login-icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <div id="perfil-text" class="login-text">
+                        <strong id="nombreUsuarioVisual">Registrar</strong>
+                    </div>
+                </a> 
 
                 <button id="open_menu" class="open_menu"><i class="bi bi-list"></i></button>
             </div>
@@ -36,39 +45,55 @@
             </div>
         </div>
     </header>
-    <section id = "def_reservations">
-        <div class = "container">
-            <h2>EXPLICACIÓN </h2>
-            <p>En SpotVia, hemos transformado la forma en que interactúas con tus espacios favoritos. Somos una plataforma digital diseñada para hacer que el proceso de reserva sea ágil, intuitivo y, sobre todo, justo. Dejamos atrás la burocracia y los sobrecostos innecesarios para enfocarnos en lo que realmente importa: tu comodidad y tu tiempo. Creemos firmemente que el único requisito para acceder a un buen espacio debería ser tu disposición y ganas de utilizarlo; nosotros nos encargamos de simplificar el resto.  </p>
-
-        </div>
-    </section>
-    <section id = "reservations">
-        <div class="container">
-            <h2>Nuestros servicios</h2>
-            <div class ="places">
-                <section id="featured-events-section" class="featured-events-section">
-                <div id="allReservationsGrid" class="events-grid"></div>
+    <div class="container-real">
+        <section class="container-filtro">
+            <h2>Explorar eventos</h2>
+            <div class="filtros">
+                <!-- El botón "Todos" inicia con la clase 'active' -->
+                <button class="filtro-btn active" data-filter="todos">Todos</button>
+                <button class="filtro-btn" data-filter="Deportes">Deportes</button>
+                <button class="filtro-btn" data-filter="Eventos">Eventos</button>
+                <button class="filtro-btn" data-filter="Restaurantes">Restaurantes</button>
+                <button class="filtro-btn" data-filter="Musica">Musica</button>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <hr>
-        <div class ="container">
-            
-            <!--contenedor de parrafo con el copyrigth de la pagina (detallitos)-->
-            <p>Spot<span class="color_primary">Via</span></p>
-    <!--contenedor de anio con el copyrigth de la pagina (detallitos)-->
-            <small>&copy; <span id="year"></span> P.I UCEVA</small>
-        </div>
-	</footer>
+        <section id = "reservations">
+            <div class="container">
+                <h2>Nuestros servicios</h2>
+                <div class ="places">
+                    <section id="featured-events-section" class="featured-events-section">
+                    <div id="allReservationsGrid" class="events-grid"></div>
+                </div>
+            </div>
+            <hr>
+        </section>
+            <section id = "def_reservations">
+            <div class = "container">
+                <h2>EXPLICACIÓN </h2>
+                <p>En SpotVia, hemos transformado la forma en que interactúas con tus espacios favoritos. Somos una plataforma digital diseñada para hacer que el proceso de reserva sea ágil, intuitivo y, sobre todo, justo. Dejamos atrás la burocracia y los sobrecostos innecesarios para enfocarnos en lo que realmente importa: tu comodidad y tu tiempo. Creemos firmemente que el único requisito para acceder a un buen espacio debería ser tu disposición y ganas de utilizarlo; nosotros nos encargamos de simplificar el resto.  </p>
 
+            </div>
+        </section>
+        <footer>
+            <hr>
+            <div class ="container">
+                
+                <!--contenedor de parrafo con el copyrigth de la pagina (detallitos)-->
+                <p>Spot<span class="color_primary">Via</span></p>
+        <!--contenedor de anio con el copyrigth de la pagina (detallitos)-->
+                <small>&copy; <span id="year"></span> P.I UCEVA</small>
+            </div>
+        </footer>
+    </div>
     <script src="../js/main.js"></script>
 
-	<script>
-		// actualiza inámicamente el año actual
-		document.getElementById('year').textContent = new Date().getFullYear();
-	</script>
+    <script>
+        // actualiza inámicamente el año actual
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+    
 </body>
 </html>

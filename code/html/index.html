@@ -5,28 +5,32 @@
     <meta http-equiv="X-UA-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SpotVia</title>
+    <!-- tipo de letra poppin -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/card.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/header.css">
 </head>
 <body>
-    <!--contenido del encabezado-->
     <header>
         <div class="container">
             <h1 class="logo">Spot<span class="color_primary">Via</span></h1>
 
-            <!-- Contenedor de la derecha (Icono Login + Botón Hamburguesa) -->
             <div class="header-actions">
                 <a href="./login.html" class="login-link">
-                    <span class="login-icon"></span>
+                    <span class="login-icon"><ion-icon name="person-outline"></ion-icon></span>
                     <div id="perfil-text" class="login-text">
-                        <strong id="nombreUsuarioVisual">Invitado</strong>
+                        <strong id="nombreUsuarioVisual">Registrar</strong>
                     </div>
                 </a> 
 
                 <button id="open_menu" class="open_menu"><i class="bi bi-list"></i></button>
             </div>
 
-            <!-- Menú desplegable lateral -->
             <div class="menu">
                 <nav class="nav" id="nav">
                     <button id="close_menu" class="close_menu"><i class="bi bi-x"></i></button>
@@ -40,30 +44,27 @@
             </div>
         </div>
     </header>
-    <!--el juego de la pagina, donde podremos hacer la reserva de los lugares-->
+
     <section id="hero">
         <h2>Bienvenido a <br>Spot<span class="color_primary">Via</span></h2>
         <a href="reserva.html" class="btn-hero">Agenda y reserva</a>
     </section>
-
-    <!-- reservas, lo mimso que va a haber en spotvia, pero como un acceso rapido -->
     
     <section id="featured-events-section" class="featured-events-section">
         <h2>Eventos destacados</h2>
         <div id="eventsGrid" class="events-grid"></div>
-        </section>
+    </section>
 
     <div class="container-button-reser">
-        <a href="reserva.html"><button class="go-reserva"> ver todos las reservas <ion-icon name="arrow-forward-outline"></ion-icon></button></a>
+        <button data-url="reserva.html" class="go-reserva"> Ver todas las reservas <ion-icon name="arrow-forward-outline"></ion-icon></button>
     </div>
 
-    <!-- //hablar sobre si quieren que sea otro documento html o que sea un apartado de la pagina principal -->
     <section id="about_us">
         <div class="container">
             <div class="img_container"></div>
             <div class="text_about_us">
-                <h2>sobre nosotros o algun tipo de informacion</h2>
-                <p>hola somos Spot<span class="color_primary">Via</span>,  la pagina web en la que puedas reservar lugares más rapido, sin muchos costos, solo <a href="login.html">registrate </a>y empieza a reservar lugares desde ya, que esperas para empezar a reservar desde ya. </p>
+                <h2>Sobre nosotros</h2>
+                <p>Hola somos Spot<span class="color_primary">Via</span>, la pagina web en la que puedas reservar lugares más rapido, sin muchos costos, solo <a href="login.html">registrate </a>y empieza a reservar lugares desde ya.</p>
             </div>
         </div>
     </section>
@@ -71,9 +72,9 @@
     <section id="characteristics">
         <div class="container">
             <ul>
-                <li><span class="color_primary">✔</span> practico y rapido</li>
-                <li><span class="color_primary">✔</span> Característica 2</li>
-                <li><span class="color_primary">✔</span> Característica 3</li>
+                <li><span class="color_primary">✔</span> Práctico y rápido</li>
+                <li><span class="color_primary">✔</span> Sin intermediarios</li>
+                <li><span class="color_primary">✔</span> Espacios de calidad</li>
             </ul>
             <div class="img_characteristic"></div>
         </div>
@@ -82,22 +83,17 @@
     <footer>
         <hr>
         <div class="container">
-            <!--contenedor de parrafo con el copyrigth de la pagina (detallitos)-->
             <p>Spot<span class="color_primary">Via</span></p>
-            <!--contenedor de anio con el copyrigth de la pagina (detallitos)-->
             <small>&copy; <span id="year"></span> P.I UCEVA</small>
         </div>
     </footer>
 
-    <!-- Enlace al archivo JS externo -->
-    <script src="../js/main.js"></script>
-    <script src="../js/cards.ts"></script>
-
     <script>
-        // actualiza dinámicamente el año actual
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+    
+    <script src="../js/main.js"></script>
 </body>
 </html>

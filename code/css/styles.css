@@ -1,11 +1,13 @@
 :root {
-    --color-primario: rgb(65, 169, 169);
-    --color-hover: rgb(50, 112, 112);
+    --color-primario: #5C9DE6;
+    --color-hover: #4b80ca;
     --fondo-oscuro: rgba(0, 0, 0, 0.871);
+    --fondo-body: #08101C;
 }
 
 *{
     box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 html{
@@ -14,8 +16,7 @@ html{
 
 body{
     margin: 0;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    background-color: rgba(0, 0, 0, 0.871);
+    background-color: var(--fondo-body);
 }
 
 
@@ -39,122 +40,6 @@ li{font-size: 1.8em;}
     margin: auto;
 }
 
-header{
-    background-color: rgba(54, 138, 138, 0.74);
-    padding: 10px;
-}
-
-header .container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .logo{
-    margin: 0;
-    padding: 10px 25px;
-    font-weight: bold;
-    font-size: 1.8em;
-    color: rgb(250, 250, 250);
-}
-
-.header-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px; 
-    margin-left: auto; 
-}
-.login-text{
-    display: none;
-}
-
-/* Enlace del usuario/registro */
-header .login-link {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    text-decoration: none;
-    color: white;
-    font-size: 1.1em;
-}
-
-/* Imagen del icono renderizada mediante CSS */
-header .login-icon {
-    display: inline-block;
-    width: 28px;
-    height: 28px;
-    background-image: url("../../implementos/usuario.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 100%;
-}
-
-.open_menu {
-    text-align: end;
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 2.5em;
-    cursor: pointer;
-}
-
-.close_menu {
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 2.5em;
-    cursor: pointer;
-    align-self: flex-end;
-}
-
-/* Menú flotante lateral */
-.nav {
-    opacity: 0;
-    visibility: hidden;
-    position: fixed;
-    background-color: rgba(37, 100, 100, 0.95);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 250px;
-    gap: 1rem;
-    padding: 20px;
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
-    z-index: 2000;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-/* Clase activa activada por JS */
-.nav.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.nav ul {
-    align-items: flex-start;
-    font-size: 1em;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 100%;
-}
-
-header a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2em;
-}
-
-header a:hover {
-    color: var(--color-hover);
-}
 
 /* --- SECCIONES PRINCIPALES --- */
 
@@ -187,86 +72,14 @@ header a:hover {
     border-radius: 5px;
     border: none;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-    background-color: rgb(65, 169, 169);
+    background-color: var(--color-primario);
     font-size: 2em;
 }
 
 #hero .btn-hero:hover{
-    background-color: rgb(50, 112, 112);
+    background-color: var(--color-hover);
 }
 
-.featured-events-section {
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 0 1.5rem;
-}
-
-.featured-events-section h2 {
-    text-align: center;
-    color: #fbfbfb;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-}
-
-.events-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-.event-card {
-    background-color: #184a50;
-    border-radius: 12px;
-    overflow: hidden; /* Evita que la imagen se salga de los bordes curvos */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.event-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 20px rgba(0, 79, 153, 0.5);
-}
-.event-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover; /* Asegura que la imagen no se deforme */
-    background-color: #363d44; /* Color de fondo mientras carga */
-}
-.event-details {
-    padding: 1.5rem;
-    flex-grow: 1; /* Empuja el botón hacia abajo si el texto es corto */
-    display: flex;
-    flex-direction: column;
-}
-.event-title {
-    font-size: 1.25rem;
-    color: #e6dddd;
-    margin-bottom: 0.5rem;
-}
-.event-info-text {
-    font-size: 0.9rem;
-    color: #c0b1b1;
-    margin-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-.event-btn {
-    margin-top: auto; /* Mantiene el botón siempre en la parte inferior de la tarjeta */
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745; /* Un color verde para diferenciarlo del formulario */
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.event-btn:hover {
-    background-color: #218838;
-}
 
 .container-button-reser{
     
@@ -286,7 +99,9 @@ header a:hover {
 }
 .go-reserva:hover{
     background-color: #11566635 ;
-    box-shadow: 0 0px 50px rgba(0, 79, 153, 0.5);
+    box-shadow: 0 0px 50px 15px  rgba(0, 79, 153, 0.5);
+    transition: color 0.3s ease;
+    transition: box-shadow 0.5s ease;
 }
 
 #about_us .container{
@@ -351,34 +166,9 @@ footer .container{
 /* --- ADAPTACIÓN RESPONSIVA (PANTALLAS GRANDES) --- */
 
 @media (min-width: 750px){
-    header{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        background-color: rgba(53, 105, 105, 0.85);
-    }
-
-    header .container{
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 15px 20px;
-    }
-
- 
-    .nav ul {
-        flex-direction: column;
-        font-size: 0.5em;
-        gap: 1rem;
-    }
-
-    .login-text{
-        display: block;
-    }
     #hero {
         height: calc(100vh - 80px);
-        margin-top: 103px; 
+        margin-top: 112px; 
     }
 
     #about_us .container{
