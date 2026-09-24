@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             location: "Calle 40 A # 25 - 48",
             imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5OAz1OTyUCeAm6Y9Rk8lPCY6oajiWhOQc4wN_caisSXPKLr83dD7iFk0&s=10",
             price: "$200.000",
-            destacado: false,
+            destacado: true,
             categoria: "Restaurantes" 
         }
     ];
